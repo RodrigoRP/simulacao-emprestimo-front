@@ -1,0 +1,42 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Resultado simulação empréstimo</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID Cliente</th>
+            <th>Parcelas</th>
+            <th>Valor Parcela</th>
+            <th>Valor Requerido</th>
+            <th>Valor Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emprestimo of emprestimos | async">
+            <td>{{emprestimo.idCliente}}</td>
+            <td>{{emprestimo.nroParcelas}}</td>
+            <td>{{emprestimo.valorParcela}}</td>
+            <td>{{emprestimo.valorRequerido}}</td>
+            <td>{{emprestimo.valorTotal}}</td>
+        
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Do you want to confirm?</p>
+    <button type="button" class="btn btn-default" >Yes</button>
+    <button type="button" class="btn btn-primary" >No</button>
+  </div>
+</ng-template>
+

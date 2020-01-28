@@ -1,0 +1,13 @@
+<h3>Atualizar Cliente</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Rendimento Mensal</label>
+      <input type="text" class="form-control" id="rendimentoMensal" required [(ngModel)]="cliente.rendimentoMensal"
+        name="rendimentoMensal">
+    </div>
+
+    <button type="submit" class="btn btn-success">Atualizar</button>
+  </form>
+</div>

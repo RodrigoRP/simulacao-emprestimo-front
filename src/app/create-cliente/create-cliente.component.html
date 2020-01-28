@@ -1,0 +1,92 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <form  (ngSubmit)="onSubmit()">
+
+        <legend class="text-center">
+          <h2>Criar cliente</h2></legend>
+
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <div class="form-group col-md-6">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required
+              [(ngModel)]="cliente.nome">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required
+              [(ngModel)]="cliente.sobrenome">
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="cpf">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required
+              [(ngModel)]="cliente.email" required email>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" required
+              [(ngModel)]="cliente.cpf">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="confirm_password">Rendimento Mensal</label>
+            <input type="text" class="form-control" name="rendimentoMensal" id="rendimentoMensal"
+              placeholder="Rendimento Mensal" required [(ngModel)]="cliente.rendimentoMensal">
+          </div>
+
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <div class="form-group col-md-6">
+            <label for="rua">Nome rua</label>
+            <input type="text" class="form-control" name="rua" id="rua" placeholder="Nome rua" required
+            [(ngModel)]="cliente.rua">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="bairro">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Bairro" required
+            [(ngModel)]="cliente.bairro">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="numero">Número</label>
+            <input type="email" class="form-control" name="numero" id="numero" placeholder="Numero" required
+            [(ngModel)]="cliente.numero">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" name="cep" id="cep" placeholder="CEP" required
+            [(ngModel)]="cliente.cep">
+          </div>
+
+
+        </fieldset>
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-success">
+              Registrar
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div *ngIf="cliente">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form (ngSubmit)="onSubmit()">
+
+
+          <fieldset>
+            <legend>Detalhes da conta</legend>
+
+            <div class="form-group col-md-6">
+              <label>Nome</label>
+              <td>{{cliente.nome}}</td>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Sobrenome</label>
+              <td>{{cliente.sobrenome}}</td>
+            </div>
+
+            <div class="form-group col-md-12">
+              <label>Email</label>
+              <td>{{cliente.email}}</td>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>CPF</label>
+              <td>{{cliente.cpf}}</td>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Rendimento Mensal</label>
+              <td>{{cliente.rendimentoMensal}}</td>
+            </div>
+          </fieldset>
+<br>
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="form-group col-md-6">
+              <label for="rua">Nome rua</label>
+              <td>{{cliente.enderecos}}</td>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="bairro">Bairro</label>
+              <td>{{cliente.enderecos}}</td>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="numero">Número</label>
+              <td>{{cliente.enderecos}}</td>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="cep">CEP</label>
+              <td>{{cliente.enderecos}}</td>
+            </div>
+
+          </fieldset>
+
+          <div class="form-group">
+            <div class="col-md-12">
+              <button (click)="list()" class="btn btn-primary">Voltar</button><br>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
